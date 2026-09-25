@@ -144,9 +144,12 @@ footer {
 }
 .team-hero {
   position: relative;
-  min-height: 75vh;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
   display: grid;
-  place-items: center;
+  place-items: start center;
   overflow: hidden;
   background: #172033;
 }
@@ -159,20 +162,28 @@ footer {
   object-fit: cover;
 }
 
+.team-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.4);
+}
+
 .team-title {
   position: relative;
-  z-index: 1;
-  padding: 2rem;
+  z-index: 2;
+  padding: clamp(5rem, 14vh, 10rem) 2rem 2rem;
   color: white;
   text-align: center;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, .65);
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.65);
 }
 
 .team-title h1 {
   margin: 0;
   font-size: clamp(4rem, 14vw, 10rem);
   line-height: 1;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
 }
 
 .team-title p {
