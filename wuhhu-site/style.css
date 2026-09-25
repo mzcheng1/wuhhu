@@ -180,13 +180,16 @@ footer {
 }
 
 .team-title h1 {
-  margin: 0;
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
   color: white;
   font-family: "Montserrat", sans-serif;
   font-size: clamp(2.5rem, 8vw, 7rem);
   font-weight: 900;
   line-height: 0.9;
   letter-spacing: -0.05em;
+  text-align: center;
 }
 
 .team-title p {
