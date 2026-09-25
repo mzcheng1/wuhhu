@@ -169,7 +169,6 @@ footer {
   z-index: 1;
   background: rgba(0, 0, 0, 0.4);
 }
-
 .team-title {
   position: relative;
   z-index: 2;
@@ -177,25 +176,23 @@ footer {
   padding: 2rem;
   color: white;
   text-align: center;
-  transform: translateY(-12vh);
 }
 
 .team-title h1 {
   margin: 0;
   color: white;
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(3rem, 10vw, 9rem);
+  font-size: clamp(2.5rem, 8vw, 7rem);
   font-weight: 900;
   line-height: 0.9;
   letter-spacing: -0.05em;
-  white-space: nowrap;
 }
 
 .team-title p {
-  margin: 1.5rem 0 0;
+  margin: 1.25rem 0 0;
   color: white;
   font-family: "Oswald", sans-serif;
-  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  font-size: clamp(1rem, 2.5vw, 2rem);
   font-weight: 700;
   text-transform: uppercase;
 }
