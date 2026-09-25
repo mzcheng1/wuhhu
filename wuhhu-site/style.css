@@ -1,4 +1,4 @@
-:root {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Oswald:wght@600;700&display=swap");:root {
   --header-blue: #000;
   --ink: #172033;
   --muted: #536078;
@@ -145,13 +145,13 @@ footer {
 .team-hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 78px);
   margin: 0;
   padding: 0;
   display: grid;
-  place-items: start center;
+  place-items: center;
   overflow: hidden;
-  background: #172033;
+  background: #16051c;
 }
 
 .team-photo {
@@ -166,27 +166,38 @@ footer {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(25, 0, 32, 0.65);
 }
 
 .team-title {
   position: relative;
-  z-index: 2;
-  padding: clamp(5rem, 14vh, 10rem) 2rem 2rem;
+  z-index: 1;
+  width: 100%;
+  padding: 2rem;
   color: white;
   text-align: center;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.65);
+  transform: translateY(-3vh);
 }
 
 .team-title h1 {
   margin: 0;
-  font-size: clamp(4rem, 14vw, 10rem);
-  line-height: 1;
-  letter-spacing: 0.06em;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(3.5rem, 15vw, 13rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  white-space: nowrap;
 }
 
 .team-title p {
+  margin: 2.5rem 0 0;
+  color: #e34450;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+}
   margin: 1rem 0 0;
   font-size: clamp(1.1rem, 3vw, 2rem);
   font-weight: 700;
