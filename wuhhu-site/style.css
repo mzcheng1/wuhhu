@@ -160,7 +160,7 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 45%;
+  object-position: center 35%;
 }
 
 .team-hero::after {
@@ -203,5 +203,5 @@ footer {
 }
 .team-hero .team-title {
   position: relative;
-  top: -8vh;
+  top: -9vh;
 }
