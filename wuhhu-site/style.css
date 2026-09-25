@@ -200,3 +200,7 @@ footer {
   font-weight: 700;
   text-transform: uppercase;
 }
+.team-hero .team-title {
+  position: relative;
+  top: -8vh;
+}
