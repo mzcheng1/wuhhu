@@ -8,7 +8,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <style>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="headers.png" alt="WUHHU home">
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="members.html">Members</a>
+      <a href="whoarewe.html" class="active">Who Are We</a>
+      <a href="ourwork.html">Our Work</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+   <style>
     :root {
       --ink: #1c2733;
       --purple: #461D7C;
@@ -17,8 +29,6 @@
     }
 
     * { box-sizing: border-box; }
-
-    body { overflow-x: hidden; }
 
     .join-page {
       font-family: 'Inter', system-ui, sans-serif;
@@ -29,14 +39,10 @@
     /* ---------- HERO ---------- */
     .jn-hero {
       position: relative;
-      min-height: 45vh;
+      min-height: 58vh;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: flex-end;
       overflow: hidden;
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
-      margin-right: calc(-50vw + 50%);
     }
 
     .jn-hero img {
@@ -66,19 +72,15 @@
       position: relative;
       z-index: 2;
       padding: 60px clamp(24px, 6vw, 90px);
-      max-width: 100%;
-      width: 100%;
-      text-align: center;
-      margin: 0 auto;
+      max-width: 900px;
     }
 
     .jn-hero-content h1 {
-      font-family: 'Montserrat', 'Inter', system-ui, sans-serif;
-      font-weight: 800;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 700;
       color: #ffffff;
-      font-size: clamp(48px, 9vw, 110px);
-      letter-spacing: 0.02em;
-      margin: 0;
+      font-size: clamp(34px, 5vw, 54px);
+      margin: 0 0 16px;
       text-shadow: 0 2px 16px rgba(0,0,0,0.25);
     }
 
@@ -320,31 +322,35 @@
     }
 
     @media (max-width: 640px) {
-      .jn-hero { min-height: 32vh; }
+      .jn-hero { min-height: 34vh; }
     }
   </style>
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="index.html">
-      <img src="headers.png" alt="WUHHU home">
-    </a>
-    <nav aria-label="Main navigation">
-      <a href="members.html">Members</a>
-      <a href="whoarewe.html" class="active">Who Are We</a>
-      <a href="ourwork.html">Our Work</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">Zhang Lab</a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="site-nav">
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="news.html">News</a>
+        <a href="join.html" class="active">Join Us</a>
+      </nav>
+    </div>
   </header>
 
   <main class="join-page">
 
     <section class="jn-hero" id="jnHero">
       <div class="jn-hero-content">
-        <h1>Who are we</h1>
+        <h1>Who Are We</h1>
+        <p>
+         We are WUHHU, WashU's only premier Hip Hop team. 
+        </p>
       </div>
     </section>
-
   </main>
 
   <script>
@@ -367,11 +373,11 @@
        page (same place "group.jpg" currently lives).
     ===================================================== */
     const heroSlides = [
+      "black.JPG",
       "soph.png",
-      "team.png",
-      "heist.png",
+      "group.png",
       "senior.png",
-      "black.JPG"
+      "love.png"
     ];
 
     const heroSlideDuration = 5000; // ms each image stays on screen
@@ -382,18 +388,17 @@
 
       /* Per-image crop position ("center X%") — tweak individually as needed */
       const heroSlidePositions = {
-        "soph.png": "center 20%",
-        "team.png": "center 20%",
-        "heist.png": "center 20%",
-        "senior.png": "center 20%",
-        "black.JPG": "center 20%"
+        "group.jpg": "center 50%",
+        "out.png": "center 50%",
+        "photo.jpg": "center 50%",
+        "outs.png": "center 75%"
       };
 
       heroSlides.forEach((src, i) => {
         const img = document.createElement("img");
         img.src = src;
-        img.alt = "WUHHU Team";
-        img.style.objectPosition = heroSlidePositions[src] || "center 20%";
+        img.alt = "Zhang Lab Group";
+        img.style.objectPosition = heroSlidePositions[src] || "center 50%";
         if (i === 0) img.classList.add("jn-slide-active");
         hero.prepend(img);
       });
@@ -481,5 +486,11 @@
     window.addEventListener("resize", setHeaderHeightVar);
     window.addEventListener("load", setHeaderHeightVar);
   </script>
+  <footer class="site-footer">
+  <div class="footer-wrap">
+    <strong>WUHHU</strong>
+    <span>WashU's Premier Hip Hop Team</span>
+  </div>
+</footer>
 </body>
 </html>
