@@ -233,8 +233,9 @@ footer {
 }
 .our-work-page { width: min(100% - 2.5rem, 1440px); margin: 0 auto; padding: clamp(3rem, 9vh, 6rem) 0; }
 .showcase-section { margin-top: 3rem; }
-.showcase-section h2 { margin: 0 0 1rem; color: #25658a; font-family: "Montserrat", sans-serif; font-size: clamp(1.5rem, 3vw, 2rem); }
+.showcase-section h2 { margin: 0 0 1rem; color: #25658a; font-family: "Oswald", sans-serif; font-size: clamp(1.5rem, 3vw, 2rem); }
 .video-placeholder { width: 100%; aspect-ratio: 16 / 9; display: grid; place-items: center; border-radius: 16px; color: #fff; background: #171717; font-family: "Nunito", sans-serif; }
+.video-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
 .youtube-frame { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 16px; }
 .card h2 { margin: 1rem 0 .4rem; font-size: 1.25rem; }
 
