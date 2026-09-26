@@ -236,3 +236,8 @@ footer {
   color: var(--ink);
   font-weight: 600;
 }
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
