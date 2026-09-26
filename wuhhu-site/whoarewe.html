@@ -19,50 +19,106 @@
     </nav>
   </header>
 
-  <main>
-   <div class="slideshow">
-  <img id="about-photo" src="images/soph.png" alt="WUHHU team photo">
+  
+  <style>
+    .slideshow {
+      max-width: 800px;
+      margin: 2rem auto;
+    }
 
-  <div class="slideshow-controls">
-    <button type="button" id="previous-photo" aria-label="Previous photo">←</button>
-    <span id="photo-count">1 / 5</span>
-    <button type="button" id="next-photo" aria-label="Next photo">→</button>
-  </div>
-</div>
+    .slideshow img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .slideshow-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+
+    .slideshow-controls button {
+      padding: 0.5rem 0.8rem;
+      border: 0;
+      border-radius: 6px;
+      color: white;
+      background: #183c52;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">WUHHU</a>
+
+    <nav aria-label="Main navigation">
+      <a href="members.html">Members</a>
+      <a href="whoarewe.html" aria-current="page">Who Are We</a>
+      <a href="ourwork.html">Our Work</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page story">
+    <p class="eyebrow">Our story</p>
+    <h1>Who are we?</h1>
+
+    <p class="intro">
+      We are WUHHU, a hip-hop team united by music, movement, and community.
+    </p>
+
+    <div class="slideshow">
+      <img id="about-photo" src="images/soph.png" alt="Sophomore team photo">
+
+      <div class="slideshow-controls">
+        <button type="button" id="previous-photo" aria-label="Previous photo">←</button>
+        <span id="photo-count">1 / 5</span>
+        <button type="button" id="next-photo" aria-label="Next photo">→</button>
+      </div>
+    </div>
+
+    <p>
+      We bring our own energy, learn from one another, and show up for the
+      culture—together.
+    </p>
   </main>
-<footer class="site-footer">
-  <div class="footer-wrap">
-    <strong>WUHHU</strong>
-    <span>WashU's Premier Hip Hop Team</span>
-  </div>
-</footer>
+
+  <footer>WUHHU · WashU's Premier Hip Hop Team</footer>
+
   <script>
-  const photos = [
-    { src: "images/soph.png", alt: "Sophomore team photo" },
-    { src: "images/black.JPG", alt: "WUHHU team photo" },
-    { src: "images/team.png", alt: "WUHHU team photo" },
-    { src: "images/heist.png", alt: "WUHHU team photo" },
-    { src: "images/senior.png", alt: "Senior team photo" }
-  ];
+    const photos = [
+      { src: "images/soph.png", alt: "Sophomore team photo" },
+      { src: "images/black.JPG", alt: "WUHHU team photo" },
+      { src: "images/team.png", alt: "WUHHU team photo" },
+      { src: "images/heist.png", alt: "WUHHU team photo" },
+      { src: "images/senior.png", alt: "Senior team photo" }
+    ];
 
-  let currentPhoto = 0;
-  const image = document.getElementById("about-photo");
-  const count = document.getElementById("photo-count");
+    let currentPhoto = 0;
+    const image = document.getElementById("about-photo");
+    const count = document.getElementById("photo-count");
 
-  function showPhoto(index) {
-    currentPhoto = (index + photos.length) % photos.length;
-    image.src = photos[currentPhoto].src;
-    image.alt = photos[currentPhoto].alt;
-    count.textContent = `${currentPhoto + 1} / ${photos.length}`;
-  }
+    function showPhoto(index) {
+      currentPhoto = (index + photos.length) % photos.length;
+      image.src = photos[currentPhoto].src;
+      image.alt = photos[currentPhoto].alt;
+      count.textContent = `${currentPhoto + 1} / ${photos.length}`;
+    }
 
-  document.getElementById("previous-photo").addEventListener("click", () => {
-    showPhoto(currentPhoto - 1);
-  });
+    document.getElementById("previous-photo").addEventListener("click", () => {
+      showPhoto(currentPhoto - 1);
+    });
 
-  document.getElementById("next-photo").addEventListener("click", () => {
-    showPhoto(currentPhoto + 1);
-  });
-</script>
+    document.getElementById("next-photo").addEventListener("click", () => {
+      showPhoto(currentPhoto + 1);
+    });
+  </script>
 </body>
 </html>
