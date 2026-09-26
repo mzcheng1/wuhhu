@@ -20,9 +20,15 @@
   </header>
 
   <main>
-    <h1>Who are we?</h1>
-    <p class="intro">We are Wuhhu, a hip-hop team united by music, movement, and community.</p>
-    <p>Tell visitors how the team started, what hip-hop means to you, and what makes your crew unique.</p>
+   <div class="slideshow">
+  <img id="about-photo" src="images/soph.png" alt="WUHHU team photo">
+
+  <div class="slideshow-controls">
+    <button type="button" id="previous-photo" aria-label="Previous photo">←</button>
+    <span id="photo-count">1 / 5</span>
+    <button type="button" id="next-photo" aria-label="Next photo">→</button>
+  </div>
+</div>
   </main>
 <footer class="site-footer">
   <div class="footer-wrap">
@@ -30,5 +36,33 @@
     <span>WashU's Premier Hip Hop Team</span>
   </div>
 </footer>
+  <script>
+  const photos = [
+    { src: "images/soph.png", alt: "Sophomore team photo" },
+    { src: "images/black.JPG", alt: "WUHHU team photo" },
+    { src: "images/team.png", alt: "WUHHU team photo" },
+    { src: "images/heist.png", alt: "WUHHU team photo" },
+    { src: "images/senior.png", alt: "Senior team photo" }
+  ];
+
+  let currentPhoto = 0;
+  const image = document.getElementById("about-photo");
+  const count = document.getElementById("photo-count");
+
+  function showPhoto(index) {
+    currentPhoto = (index + photos.length) % photos.length;
+    image.src = photos[currentPhoto].src;
+    image.alt = photos[currentPhoto].alt;
+    count.textContent = `${currentPhoto + 1} / ${photos.length}`;
+  }
+
+  document.getElementById("previous-photo").addEventListener("click", () => {
+    showPhoto(currentPhoto - 1);
+  });
+
+  document.getElementById("next-photo").addEventListener("click", () => {
+    showPhoto(currentPhoto + 1);
+  });
+</script>
 </body>
 </html>
