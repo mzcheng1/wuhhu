@@ -225,11 +225,7 @@ footer {
   object-fit: cover;
   background: #d7edf8;
 }
-.member-card h3 {
-  font-family: "Nunito", sans-serif;
-  font-weight: 400;
-  text-align: center;
-}
+.member-card h3 { margin: 0; padding: 1rem .75rem; color: #263445; font-family: "Nunito", sans-serif; font-size: 1rem; font-weight: 500; letter-spacing: .035em; text-align: center; text-transform: uppercase; }
 .photo-placeholder { min-height: 180px; display: grid; place-items: center; border-radius: 12px; color: var(--accent); background: #d7edf8; font-weight: 750; }
 
 .card h2 { margin: 1rem 0 .4rem; font-size: 1.25rem; }
