@@ -220,10 +220,8 @@ footer {
 .member-photo {
   display: block;
   width: 100%;
-  max-width: 220px;
   aspect-ratio: 4 / 5;
-  margin: 1rem auto 0;
-  border-radius: 10px;
+  margin: 0;
   object-fit: cover;
   background: #d7edf8;
 }
@@ -234,9 +232,10 @@ footer {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   font-weight: 700;
+  letter-spacing: 0.06em;
   text-align: center;
+  text-transform: uppercase;
 }
-
 .photo-placeholder { min-height: 180px; display: grid; place-items: center; border-radius: 12px; color: var(--accent); background: #d7edf8; font-weight: 750; }
 
 .card h2 { margin: 1rem 0 .4rem; font-size: 1.25rem; }
