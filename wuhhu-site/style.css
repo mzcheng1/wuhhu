@@ -278,9 +278,8 @@ a:focus-visible { outline: 3px solid #152dff; outline-offset: 4px; }
   color: #fff;
   text-align: center;
 }
-
 .site-footer strong {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 1.25rem;
   letter-spacing: 0.12em;
 }
