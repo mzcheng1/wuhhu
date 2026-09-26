@@ -227,14 +227,9 @@ footer {
 }
 
 .member-card h3 {
-  margin: 0;
-  padding: 1rem 0.65rem;
-  font-family: "Lato", sans-serif;
-  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  letter-spacing: 0.04em;
   text-align: center;
-  text-transform: uppercase;
 }
 .photo-placeholder { min-height: 180px; display: grid; place-items: center; border-radius: 12px; color: var(--accent); background: #d7edf8; font-weight: 750; }
 
