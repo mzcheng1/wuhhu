@@ -38,6 +38,11 @@ body {
   letter-spacing: .12em;
   text-decoration: none;
 }
+.brand img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
 
 nav {
   display: flex;
