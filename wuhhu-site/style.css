@@ -286,6 +286,13 @@ a:focus-visible { outline: 3px solid #152dff; outline-offset: 4px; }
   flex-wrap: wrap;
 }
 
-.footer-wrap a {
-  margin-left: 1rem;
+.footer-wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  text-align: center;
 }
