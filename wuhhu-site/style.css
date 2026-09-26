@@ -205,3 +205,34 @@ footer {
   position: relative;
   top: -9vh;
 }
+.members-page h1 {
+  margin-bottom: 3rem;
+}
+
+.class-section {
+  margin: 0 0 3rem;
+}
+
+.class-section h2 {
+  margin: 0 0 1rem;
+  padding-bottom: .6rem;
+  border-bottom: 3px solid var(--header-blue);
+  font-size: 1.8rem;
+}
+
+.member-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: .75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.member-list li {
+  padding: 1rem 1.1rem;
+  border-radius: 12px;
+  background: white;
+  color: var(--ink);
+  font-weight: 600;
+}
