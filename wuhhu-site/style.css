@@ -269,23 +269,23 @@ a:focus-visible { outline: 3px solid #152dff; outline-offset: 4px; }
   .photo-placeholder { min-height: 230px; }
 }
 .site-footer {
+  margin-top: 3rem;
+  border-top: 1px solid #4aa9d8;
+  background: #fff;
+  color: #172033;
+}
+
+.footer-wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.4rem;
-  padding: 1.75rem 1rem;
- background: #123b6d;
-  color: #fff;
-  text-align: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.site-footer strong {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.25rem;
-  letter-spacing: 0.12em;
-}
-
-.site-footer span {
-  font-family: "Nunito", sans-serif;
-  font-size: 1rem;
+.footer-wrap a {
+  margin-left: 1rem;
 }
