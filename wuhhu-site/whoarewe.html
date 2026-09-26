@@ -18,6 +18,8 @@
 
     * { box-sizing: border-box; }
 
+    body { overflow-x: hidden; }
+
     .join-page {
       font-family: 'Inter', system-ui, sans-serif;
       color: var(--ink);
@@ -27,11 +29,14 @@
     /* ---------- HERO ---------- */
     .jn-hero {
       position: relative;
-      min-height: 58vh;
+      min-height: 45vh;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
     }
 
     .jn-hero img {
@@ -315,7 +320,7 @@
     }
 
     @media (max-width: 640px) {
-      .jn-hero { min-height: 34vh; }
+      .jn-hero { min-height: 32vh; }
     }
   </style>
 </head>
@@ -336,7 +341,7 @@
 
     <section class="jn-hero" id="jnHero">
       <div class="jn-hero-content">
-        <h1>Who Are We</h1>
+        <h1>Who are we</h1>
       </div>
     </section>
 
