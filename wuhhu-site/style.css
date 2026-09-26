@@ -225,11 +225,11 @@ footer {
   object-fit: cover;
   background: #d7edf8;
 }
-
 .member-card h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   text-align: center;
+  text-transform: uppercase;
 }
 .photo-placeholder { min-height: 180px; display: grid; place-items: center; border-radius: 12px; color: var(--accent); background: #d7edf8; font-weight: 750; }
 
