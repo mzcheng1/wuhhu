@@ -327,19 +327,6 @@
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">Zhang Lab</a>
-      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
-      <nav class="site-nav">
-        <a href="research.html">Research</a>
-        <a href="people.html">People</a>
-        <a href="publications.html">Publications</a>
-        <a href="news.html">News</a>
-        <a href="join.html" class="active">Join Us</a>
-      </nav>
-    </div>
-  </header>
 
   <main class="join-page">
 
@@ -373,11 +360,11 @@
        page (same place "group.jpg" currently lives).
     ===================================================== */
     const heroSlides = [
-      "black.JPG",
+      "love.png",
       "soph.png",
       "group.png",
       "senior.png",
-      "love.png"
+      "black.JPG"
     ];
 
     const heroSlideDuration = 5000; // ms each image stays on screen
@@ -388,10 +375,11 @@
 
       /* Per-image crop position ("center X%") — tweak individually as needed */
       const heroSlidePositions = {
-        "group.jpg": "center 50%",
-        "out.png": "center 50%",
-        "photo.jpg": "center 50%",
-        "outs.png": "center 75%"
+        "love.png": "center 50%",
+        "soph.png": "center 50%",
+        "group.png": "center 50%",
+        "senior.png": "center 75%",
+        "black.JPG": "center 50%"
       };
 
       heroSlides.forEach((src, i) => {
