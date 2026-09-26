@@ -269,12 +269,12 @@ a:focus-visible { outline: 3px solid #152dff; outline-offset: 4px; }
   .photo-placeholder { min-height: 230px; }
 }
 .site-footer {
-  margin-top: 1.5rem;
+  width: min(90%, 600px);
+  margin: 1.5rem auto 0;
   border-top: 1px solid #4aa9d8;
   background: #fff;
   color: #172033;
 }
-
 .footer-wrap {
   padding: 0.75rem 1rem;
   display: flex;
