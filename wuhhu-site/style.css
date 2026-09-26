@@ -289,32 +289,4 @@ a:focus-visible { outline: 3px solid #152dff; outline-offset: 4px; }
   gap: 0.15rem;
   text-align: center;
 }
-.slideshow {
-  max-width: 800px;
-  margin: 2rem auto;
-}
 
-.slideshow img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.slideshow-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.25rem;
-  margin-top: 1rem;
-}
-
-.slideshow-controls button {
-  padding: 0.5rem 0.8rem;
-  border: 0;
-  border-radius: 6px;
-  color: white;
-  background: #183c52;
-  cursor: pointer;
-}
