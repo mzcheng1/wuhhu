@@ -205,65 +205,36 @@ footer {
 .members-page { width: min(100% - 2.5rem, 1180px); }
 .members-page > h1 { margin-bottom: 3rem; }
 .class-section { margin: 0 0 3.5rem; }
-.class-section h2 { margin: 0 0 1.25rem; padding-bottom: .65rem; border-bottom: 2px solid #79c5e8; color: #79c5e8; font-size: 1.5rem; }
+.class-section h2 { margin: 0 0 1.25rem; padding-bottom: .65rem; border-bottom: 2px solid #25658a; color: #25658a; font-size: 1.9rem; }
 .class-section h2 span { margin-left: .5rem; color: var(--muted); font-size: .7em; font-weight: 500; }
 .member-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .member-card { overflow: hidden; border-radius: 16px; background: var(--white); box-shadow: 0 10px 28px rgba(23, 32, 51, .08); }
 .member-photo { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: #d7edf8; }
 .member-card h3 { margin: 0; padding: 1rem; font-size: 1rem; }
+
 .photo-placeholder { min-height: 180px; display: grid; place-items: center; border-radius: 12px; color: var(--accent); background: #d7edf8; font-weight: 750; }
+
 .card h2 { margin: 1rem 0 .4rem; font-size: 1.25rem; }
+
 .card p, .story > p:not(.eyebrow):not(.intro) { color: var(--muted); line-height: 1.75; }
+
 .story { max-width: 760px; }
+
 .story > p:not(.eyebrow) { max-width: 62ch; }
+
 .contact-links { display: flex; align-items: center; flex-wrap: wrap; gap: 1.25rem; }
+
 .text-link { color: var(--accent); font-weight: 750; }
+
 footer { padding: 1.5rem; color: #637089; text-align: center; font-size: .9rem; }
+
 a:focus-visible { outline: 3px solid #152dff; outline-offset: 4px; }
+
 @media (max-width: 650px) {
-.site-header { min-height: 0; padding: 1rem 1.25rem; align-items: flex-start; flex-direction: column; gap: .7rem; }
-nav { gap: 1.2rem; }
-.cards { grid-template-columns: 1fr; }
-.member-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
-.member-card h3 { padding: .75rem; font-size: .9rem; }
-.photo-placeholder { min-height: 230px; }
-}.team-hero .team-title {
-  position: relative;
-  top: -9vh;
-}
-.members-page h1 {
-  margin-bottom: 3rem;
-}
-
-.class-section {
-  margin: 0 0 3rem;
-}
-
-.class-section h2 {
-  margin: 0 0 1rem;
-  padding-bottom: .6rem;
-  border-bottom: 3px solid var(--header-blue);
-  font-size: 1.8rem;
-}
-
-.member-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: .75rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.member-list li {
-  padding: 1rem 1.1rem;
-  border-radius: 12px;
-  background: white;
-  color: var(--ink);
-  font-weight: 600;
-}
-.member-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  .site-header { min-height: 0; padding: 1rem 1.25rem; align-items: flex-start; flex-direction: column; gap: .7rem; }
+  nav { gap: 1.2rem; }
+  .cards { grid-template-columns: 1fr; }
+  .member-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+  .member-card h3 { padding: .75rem; font-size: .9rem; }
+  .photo-placeholder { min-height: 230px; }
 }
