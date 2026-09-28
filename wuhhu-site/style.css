@@ -289,3 +289,25 @@ a:focus-visible { outline: 3px solid #152dff; outline-offset: 4px; }
   gap: 0.15rem;
   text-align: center;
 }
+.explore {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: clamp(4rem, 12vh, 7rem) clamp(1.5rem, 6vw, 4rem);
+}
+
+.explore-link {
+  color: inherit;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding-bottom: .35rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color .2s ease;
+}
+
+.explore-link:hover,
+.explore-link:focus-visible {
+  border-color: currentColor;
+}
