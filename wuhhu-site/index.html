@@ -7,12 +7,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
   <style>
-    .team-hero {
+  .team-hero {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
+  margin-top: calc(-1 * clamp(3rem, 9vh, 6rem)); /* cancels main's top padding */
+  position: relative;
+  overflow: hidden;
 }
 
+.team-photo {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
 .team-title {
   max-width: 1040px;
   margin: 0 auto;
