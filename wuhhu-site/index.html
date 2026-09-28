@@ -6,11 +6,47 @@
   <title>Wuhhu | Hip-Hop Team</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <style>
+    .team-hero {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.team-title {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.explore {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: clamp(4rem, 12vh, 7rem) clamp(1.5rem, 6vw, 4rem);
+}
+
+.explore-link {
+  color: inherit;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding-bottom: .35rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color .2s ease;
+}
+
+.explore-link:hover,
+.explore-link:focus-visible {
+  border-color: currentColor;
+}
+  </style>
 <body>
   <header class="site-header">
-   <a class="brand" href="index.html">
-  <img src="headers.png" alt="WUHHU home">
-</a>
+    <a class="brand" href="index.html">
+      <img src="headers.png" alt="WUHHU home">
+    </a>
     <nav aria-label="Main navigation">
       <a href="members.html">Members</a>
       <a href="whoarewe.html">Who Are We</a>
@@ -18,18 +54,34 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-<main class="team-hero">
-  <img class="team-photo" src="team.png" alt="The WUHHU hip-hop team">
-  <div class="team-title">
-    <h1>WUHHU</h1>
-    <p>WashU's Premier Hip Hop Team</p>
-  </div>
-</main>
-<footer class="site-footer">
-  <div class="footer-wrap">
-    <strong>WUHHU</strong>
-    <span>WashU's Premier Hip Hop Team</span>
-  </div>
-</footer>
+
+  <main>
+    <section class="team-hero">
+      <img class="team-photo" src="team.png" alt="The WUHHU hip-hop team">
+      <div class="team-title">
+        <h1>WUHHU</h1>
+        <p>WashU's Premier Hip Hop Team</p>
+      </div>
+    </section>
+
+    <section class="explore">
+      <a class="explore-link" href="whoarewe.html">
+        <span>Learn more about us</span>
+      </a>
+      <a class="explore-link" href="ourwork.html">
+        <span>Our work</span>
+      </a>
+      <a class="explore-link" href="members.html">
+        <span>Meet the team</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <strong>WUHHU</strong>
+      <span>WashU's Premier Hip Hop Team</span>
+    </div>
+  </footer>
 </body>
 </html>
