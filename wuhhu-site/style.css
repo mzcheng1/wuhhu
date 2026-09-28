@@ -289,4 +289,23 @@ a:focus-visible { outline: 3px solid #152dff; outline-offset: 4px; }
   gap: 0.15rem;
   text-align: center;
 }
+.team-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
 
+.team-links a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  padding-bottom: .3rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color .2s ease;
+}
+
+.team-links a:hover,
+.team-links a:focus-visible {
+  border-color: currentColor;
+}
