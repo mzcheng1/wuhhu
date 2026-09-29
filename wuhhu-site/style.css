@@ -416,25 +416,54 @@ a:focus-visible { outline: 3px solid #152dff; outline-offset: 4px; }
   .section-alt .container.split {
     grid-template-columns: 1fr;
   }
+.cards-section {
+  width: min(100% - 2.5rem, 1280px);
+  margin: 0 auto;
+  padding: clamp(3rem, 8vh, 5rem) 0;
 }
+
 .cards {
-  gap: 2rem; /* was 1.25rem */
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.card-link .card {
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 1px solid rgba(23, 32, 51, 0.1);
+  background: #fff;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card-link:hover .card,
+.card-link:focus-visible .card {
+  border-color: var(--accent);
+  transform: translateY(-3px);
 }
 
 .card-img {
-  aspect-ratio: 4 / 3.5; /* taller than before (was 4/3) */
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3.5;
+  object-fit: cover;
 }
 
 .card h3 {
-  font-size: 1.6rem; /* was 1.3rem */
-  margin-top: 1.5rem;
+  margin: 1.5rem 0 0.6rem;
   padding: 0 1.75rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ink);
 }
 
 .card p {
-  font-size: 1.05rem;
   padding: 0 1.75rem 2rem;
-}
-.cards-section {
-  width: min(100% - 2.5rem, 1280px); /* was 1040px */
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.75;
 }
