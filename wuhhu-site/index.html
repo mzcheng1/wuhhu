@@ -18,56 +18,32 @@
       <a href="contact.html">Contact</a>
     </nav>
     <style>
-    /* =====================
-   EXPLORE CARDS
-===================== */
-.cards {
+  .cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   align-items: stretch;
 }
 
-/* clickable card wrapper */
-/* REMOVE ALL LINK UNDERLINES */
-.card-link,
-.card-link:link,
-.card-link:visited,
-.card-link:hover,
-.card-link:active,
-.card-link:focus {
-  text-decoration: none !important;
-  color: inherit !important;
-  display: flex;
+.card-link {
+  display: block;
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
 }
 
-/* make sure card text never underlines */
-.card-link h3,
-.card-link p {
-  text-decoration: none !important;
-}
-
-/* cards — equal height */
 .card {
   background: white;
   border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   border: 1px solid rgba(90, 63, 192, 0.10);
-
-  width: 100%;
-  min-height: 240px; /* SAME HEIGHT */
-
+  height: 100%;
   display: flex;
   flex-direction: column;
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-/* hover animation */
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 18px 40px rgba(0,0,0,0.12);
@@ -91,6 +67,12 @@
   color: #555;
   line-height: 1.6;
   margin: 0 30px 30px;
+}
+
+@media (max-width: 750px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
     </style>
   </header>
