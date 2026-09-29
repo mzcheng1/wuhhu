@@ -18,29 +18,79 @@
       <a href="contact.html">Contact</a>
     </nav>
     <style>
-     .card-link .card {
-  padding: 0; /* remove the shared padding */
-  overflow: hidden; /* so the image respects the border-radius */
+    /* =====================
+   EXPLORE CARDS
+===================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* clickable card wrapper */
+/* REMOVE ALL LINK UNDERLINES */
+.card-link,
+.card-link:link,
+.card-link:visited,
+.card-link:hover,
+.card-link:active,
+.card-link:focus {
+  text-decoration: none !important;
+  color: inherit !important;
+  display: flex;
+}
+
+/* make sure card text never underlines */
+.card-link h3,
+.card-link p {
+  text-decoration: none !important;
+}
+
+/* cards — equal height */
+.card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  border: 1px solid rgba(90, 63, 192, 0.10);
+
+  width: 100%;
+  min-height: 240px; /* SAME HEIGHT */
+
+  display: flex;
+  flex-direction: column;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* hover animation */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+  border-color: rgba(90, 63, 192, 0.25);
 }
 
 .card-img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: 180px;
   object-fit: cover;
 }
 
-.card h3,
-.card p {
-  padding: 0 1.75rem; /* add padding back just for text */
-}
-
 .card h3 {
-  margin-top: 1.25rem;
+  color: #4B2E83;
+  font-size: 22px;
+  margin: 20px 30px 12px;
 }
 
 .card p {
-  padding-bottom: 1.75rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 30px 30px;
 }
     </style>
   </header>
