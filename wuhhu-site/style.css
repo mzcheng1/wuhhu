@@ -406,3 +406,8 @@ a:focus-visible { outline: 3px solid #152dff; outline-offset: 4px; }
 .card p {
   padding-bottom: 1.75rem;
 }
+  section.cards-section {
+  width: min(100% - 2.5rem, 1280px);
+  margin: 0 auto;
+  padding: clamp(3rem, 8vh, 5rem) 0;
+}
