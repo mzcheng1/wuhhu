@@ -396,6 +396,7 @@ a:focus-visible { outline: 3px solid #152dff; outline-offset: 4px; }
 
 .card-link {
   display: block;
+  min-width: 0;
   color: inherit;
   text-decoration: none;
 }
