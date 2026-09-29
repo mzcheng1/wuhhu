@@ -18,12 +18,9 @@
       <a href="contact.html">Contact</a>
     </nav>
     <style>
-      .cards-section {
-  width: min(100% - 2.5rem, 1000px);  /* was 1280px — smaller container */
-}
-
-.cards {
-  gap: 1.25rem;  /* was 2rem — tighter spacing */
+     .card-link .card {
+  padding: 0; /* remove the shared padding */
+  overflow: hidden; /* so the image respects the border-radius */
 }
 
 .card-img {
@@ -31,18 +28,19 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: 4px 4px 0 0;
+}
+
+.card h3,
+.card p {
+  padding: 0 1.75rem; /* add padding back just for text */
 }
 
 .card h3 {
-  font-size: 1.15rem;  /* was 1.4rem */
-  margin: 1rem 0 0.4rem;
-  padding: 0 1.25rem;
+  margin-top: 1.25rem;
 }
 
 .card p {
-  font-size: 0.9rem;  /* was 1rem */
-  padding: 0 1.25rem 1.25rem;
+  padding-bottom: 1.75rem;
 }
     </style>
   </header>
