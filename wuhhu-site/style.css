@@ -391,7 +391,7 @@ a:focus-visible { outline: 3px solid #152dff; outline-offset: 4px; }
 }
 
 .card-img {
-  height: 180px;  /* was 260px — shorter photos */
+  height: 50px;  /* was 260px — shorter photos */
 }
 
 .card h3 {
