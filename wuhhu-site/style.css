@@ -421,9 +421,7 @@ a:focus-visible { outline: 3px solid #152dff; outline-offset: 4px; }
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: 4px 4px 0 0;
 }
-  
 
 .card h3 {
   margin: 1.25rem 0 0.5rem;
