@@ -382,32 +382,25 @@ a:focus-visible { outline: 3px solid #152dff; outline-offset: 4px; }
   .section-alt .container.split {
     grid-template-columns: 1fr;
   }
-.card-link .card {
-  padding: 0; /* remove the shared padding */
-  overflow: hidden; /* so the image respects the border-radius */
+.cards-section {
+  width: min(100% - 2.5rem, 500px);  /* was 1280px — smaller container */
+}
+
+.cards {
+  gap: 1.25rem;  /* was 2rem — tighter spacing */
 }
 
 .card-img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-.card h3,
-.card p {
-  padding: 0 1.75rem; /* add padding back just for text */
+  height: 180px;  /* was 260px — shorter photos */
 }
 
 .card h3 {
-  margin-top: 1.25rem;
+  font-size: 1.15rem;  /* was 1.4rem */
+  margin: 1rem 0 0.4rem;
+  padding: 0 1.25rem;
 }
 
 .card p {
-  padding-bottom: 1.75rem;
-}
-  section.cards-section {
-  width: min(100% - 2.5rem, 1280px);
-  margin: 0 auto;
-  padding: clamp(3rem, 8vh, 5rem) 0;
+  font-size: 0.9rem;  /* was 1rem */
+  padding: 0 1.25rem 1.25rem;
 }
