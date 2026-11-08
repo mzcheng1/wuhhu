@@ -386,3 +386,12 @@ a:focus-visible { outline: 3px solid #152dff; outline-offset: 4px; }
   transform: scale(1.3);
   transform-origin: center;
 }
+.photo-zoom {
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.photo-zoom .member-photo {
+  transform: scale(1.4);
+  transform-origin: center top; /* change to "center" to zoom on the middle */
+}
