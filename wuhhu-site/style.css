@@ -395,3 +395,259 @@ a:focus-visible { outline: 3px solid #152dff; outline-offset: 4px; }
   transform: scale(1.4);
   transform-origin: center top; /* change to "center" to zoom on the middle */
 }
+Style · CSS
+/* WUHHU site stylesheet
+   Look: wheatpaste street poster. Concrete wall, thick ink outlines,
+   hard offset shadows, one strip of yellow tape per page. */
+ 
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Work+Sans:wght@400;500;700&display=swap");
+ 
+:root {
+  --concrete: #d8dadb;
+  --chalk: #f6f6f3;
+  --ink: #1e2227;
+  --brick: #b01e23;
+  --tape: #f0cd2e;
+ 
+  --display: "Anton", "Impact", "Arial Narrow Bold", sans-serif;
+  --body: "Work Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+ 
+  --edge: 3px solid var(--ink);
+  --pop: 6px 6px 0 var(--ink);
+}
+ 
+*, *::before, *::after { box-sizing: border-box; }
+ 
+html { scroll-behavior: smooth; }
+ 
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: var(--ink);
+  background-color: var(--concrete);
+  /* faint concrete speckle */
+  background-image:
+    radial-gradient(rgba(30, 34, 39, 0.07) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px);
+  background-size: 22px 22px, 37px 37px;
+  background-position: 0 0, 11px 17px;
+}
+ 
+img { max-width: 100%; height: auto; }
+ 
+a { color: var(--brick); text-underline-offset: 3px; }
+a:hover { color: var(--ink); }
+ 
+:focus-visible {
+  outline: 3px solid var(--brick);
+  outline-offset: 3px;
+}
+ 
+/* ---------- Header ---------- */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  padding: 0.75rem clamp(1rem, 4vw, 3rem);
+  background: var(--chalk);
+  border-bottom: var(--edge);
+}
+ 
+.brand { display: inline-flex; align-items: center; }
+.brand img { display: block; height: 46px; width: auto; }
+ 
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+}
+ 
+.site-header nav a {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--ink);
+  padding: 0.3rem 0.7rem;
+  border: 3px solid transparent;
+}
+ 
+.site-header nav a:hover { border-color: var(--ink); color: var(--ink); }
+ 
+.site-header nav a[aria-current="page"] {
+  background: var(--brick);
+  color: var(--chalk);
+  border-color: var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+ 
+/* ---------- Main ---------- */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 4.5rem) clamp(1rem, 4vw, 2rem);
+}
+ 
+/* The one memorable thing: a strip of tape over a poster-size headline */
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.3rem 1rem;
+  background: var(--tape);
+  border: 2px solid var(--ink);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transform: rotate(-2deg);
+}
+ 
+h1 {
+  margin: 0 0 1rem;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(3rem, 11vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+ 
+h2 {
+  margin: 0 0 0.5rem;
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+ 
+p { max-width: 62ch; }
+ 
+.intro {
+  font-size: 1.25rem;
+  font-weight: 500;
+  max-width: 48ch;
+  margin-bottom: 1.5rem;
+}
+ 
+/* ---------- Buttons ---------- */
+.button,
+button.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--display);
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: var(--chalk);
+  background: var(--brick);
+  border: var(--edge);
+  box-shadow: 5px 5px 0 var(--ink);
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+ 
+.button:hover {
+  color: var(--chalk);
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+ 
+.button:active {
+  transform: translate(5px, 5px);
+  box-shadow: 0 0 0 var(--ink);
+}
+ 
+/* ---------- Contact page ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.75rem;
+  margin: 2.5rem 0;
+}
+ 
+.contact-card {
+  background: var(--chalk);
+  border: var(--edge);
+  box-shadow: var(--pop);
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+ 
+.contact-card h2 { margin-top: 0; }
+.contact-card p { margin-top: 0; }
+.contact-card a { font-weight: 700; }
+ 
+.contact-form-wrap {
+  margin: 3.5rem 0;
+  max-width: 640px;
+  background: var(--chalk);
+  border: var(--edge);
+  box-shadow: var(--pop);
+  padding: 1.5rem;
+}
+ 
+.contact-form { display: grid; gap: 0.35rem; }
+.contact-form label { font-weight: 700; margin-top: 0.75rem; }
+ 
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 0;
+}
+ 
+.contact-form .button { margin-top: 1.25rem; justify-self: start; }
+ 
+.contact-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0 0;
+}
+ 
+.social-list { list-style: none; padding: 0; margin: 0; }
+.social-list li { margin-bottom: 0.5rem; }
+.social-list a { font-weight: 700; }
+ 
+/* ---------- Footer ---------- */
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  padding: 1.25rem clamp(1rem, 4vw, 3rem);
+  background: var(--brick);
+  color: var(--chalk);
+  border-top: var(--edge);
+}
+ 
+.site-footer strong {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 0.06em;
+}
+ 
+@media (max-width: 560px) {
+  .brand img { height: 38px; }
+  .site-header nav a { font-size: 1rem; padding: 0.25rem 0.5rem; }
+  .contact-form-wrap { padding: 1.1rem; }
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .button { transition: none; }
+}
