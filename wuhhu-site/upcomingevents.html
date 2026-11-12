@@ -18,4 +18,462 @@
       <a href="ourwork.html">Our Work</a>
       <a href="contact.html">Contact</a>
     </nav>
+    <style>
+      
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #416db2;
+  --cream: #f1eee7;
+  --black: #090a0d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--cream);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  height: 90px;
+  padding: 0 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255,255,255,.35);
+  background: rgba(5, 6, 9, .55);
+}
+
+.logo {
+  color: var(--cream);
+  font-family: 'Permanent Marker', cursive;
+  font-size: 32px;
+  text-decoration: none;
+  letter-spacing: -2px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 34px;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding-bottom: 8px;
+  transition: .3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  border-bottom: 2px solid white;
+  color: var(--blue);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+/* HERO BACKGROUND */
+
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,7,11,.88) 0%,
+      rgba(5,7,11,.67) 48%,
+      rgba(5,7,11,.30) 100%
+    ),
+    url("industry.png") center center / cover no-repeat;
+}
+
+/* HERO TEXT */
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  width: 75%;
+  padding: 150px 0 120px 5%;
+}
+
+.eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(30px, 4vw, 54px);
+  letter-spacing: 5px;
+  margin-left: 16%;
+  margin-bottom: 0;
+}
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: clamp(65px, 11vw, 175px);
+  line-height: .85;
+  letter-spacing: -7px;
+  white-space: nowrap;
+  color: var(--cream);
+  text-shadow: 0 5px 25px rgba(0,0,0,.3);
+}
+
+.hero h1 span {
+  color: var(--blue);
+}
+
+/* EVENT INFORMATION */
+
+.event-info {
+  text-align: center;
+  margin-top: 35px;
+  width: 90%;
+  font-size: clamp(13px, 1.7vw, 22px);
+  font-weight: 500;
+  letter-spacing: 9px;
+}
+
+.event-info sup {
+  font-size: 10px;
+  letter-spacing: 0;
+}
+
+.event-info span {
+  margin: 0 12px;
+}
+
+.event-info .venue {
+  margin-top: 12px;
+}
+
+/* SEPARATOR */
+
+.separator {
+  width: 125px;
+  height: 2px;
+  background: var(--cream);
+  margin: 40px auto 30px;
+  opacity: .7;
+}
+
+/* TICKETS */
+
+.ticket-label {
+  text-align: center;
+  width: 90%;
+  letter-spacing: 7px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.ticket-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  min-width: 320px;
+  margin: auto;
+  padding: 15px 25px;
+  border: 1px solid var(--cream);
+  border-radius: 40px;
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: .3s;
+  background: rgba(0,0,0,.35);
+}
+
+.ticket-button:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+  transform: translateY(-4px);
+}
+
+/* DANCER */
+
+.dancer-container {
+  position: absolute;
+  right: 2%;
+  bottom: 85px;
+  width: 43%;
+  height: 82%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.dancer-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: grayscale(100%) contrast(1.15);
+  mix-blend-mode: screen;
+}
+
+/* BLUE GRAPHIC ACCENTS */
+
+.blue-mark {
+  position: absolute;
+  color: var(--blue);
+  font-family: 'Permanent Marker', cursive;
+  opacity: .8;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mark-one {
+  top: 12%;
+  left: 3%;
+  font-size: 150px;
+  transform: rotate(-30deg);
+}
+
+.mark-two {
+  bottom: 5%;
+  left: 2%;
+  font-size: 180px;
+  transform: rotate(-15deg);
+}
+
+/* FOOTER */
+
+.hero-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 85px;
+  padding: 20px 4%;
+  border-top: 1px solid rgba(255,255,255,.5);
+  background: rgba(0,0,0,.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+
+.bottom-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  letter-spacing: 7px;
+}
+
+.tagline {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 6px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+  .navbar nav {
+    gap: 15px;
+  }
+
+  .navbar nav a {
+    font-size: 10px;
+  }
+
+  .hero-content {
+    width: 100%;
+    padding-top: 150px;
+  }
+
+  .hero h1 {
+    font-size: 12vw;
+    letter-spacing: -3px;
+  }
+
+  .dancer-container {
+    opacity: .4;
+    width: 65%;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .navbar {
+    height: 75px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar nav {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    flex-direction: column;
+    background: #090a0d;
+  }
+
+  .navbar nav.show {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero-content {
+    padding: 150px 20px 130px;
+    width: 100%;
+  }
+
+  .eyebrow {
+    margin-left: 5%;
+    font-size: 30px;
+  }
+
+  .hero h1 {
+    white-space: normal;
+    font-size: 17vw;
+    line-height: .9;
+  }
+
+  .event-info {
+    width: 100%;
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .ticket-label {
+    width: 100%;
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .ticket-button {
+    min-width: 0;
+    width: 85%;
+    font-size: 10px;
+  }
+
+  .dancer-container {
+    width: 90%;
+    height: 55%;
+    right: -20%;
+    opacity: .3;
+  }
+
+  .hero-bottom {
+    padding: 15px;
+    min-height: 70px;
+  }
+
+  .bottom-logo {
+    font-size: 17px;
+  }
+
+  .tagline {
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+  .mark-one {
+    font-size: 90px;
+  }
+}
+    </style>
   </header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WUHHU | The Blueprint</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+  <!-- HERO SECTION -->
+  <main class="hero" id="events">
+
+    <div class="blue-mark mark-one">〰</div>
+    <div class="blue-mark mark-two">↗</div>
+
+    <div class="hero-content">
+
+      <p class="eyebrow">WUHHU PRESENTS:</p>
+
+      <h1>
+        THE <span>BLUEPRINT</span>
+      </h1>
+
+      <div class="event-info">
+        <p>DECEMBER 4<sup>TH</sup> & 5<sup>TH</sup> <span>•</span> 7 PM</p>
+        <p class="venue">EDISON THEATRE</p>
+      </div>
+
+      <div class="separator"></div>
+
+      <p class="ticket-label">GET YOUR TICKETS HERE:</p>
+
+      <a
+        href="https://universityservices.washu.edu/our-services/washu-box-office/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ticket-button"
+      >
+        GET TICKETS <span>↗</span>
+      </a>
+
+    </div>
+
+    <!-- DANCER IMAGE -->
+    <div class="dancer-container">
+      <img src="images/dancer.png" alt="Hip-hop dancer performing a breakdance move">
+    </div>
+
+    <div class="hero-bottom">
+      <span class="bottom-logo">WUHHU</span>
+      <span class="tagline">DANCE &nbsp; • &nbsp; COMMUNITY &nbsp; • &nbsp; CULTURE</span>
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
