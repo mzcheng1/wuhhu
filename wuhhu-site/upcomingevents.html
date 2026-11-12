@@ -112,155 +112,155 @@ body {
   background-color: #090a0d;
 }
 
+/* HERO TEXT */
 
-/* MAIN HERO */
-
-.hero {
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-
-  background-image:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,.25),
-      rgba(0,0,0,.2) 50%,
-      rgba(0,0,0,.6)
-    ),
-    url("./images/warehouse.png");
-
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #090a0d;
-}
-
-/* LARGE CENTERED TITLE */
-
-.hero-heading {
+.hero-content {
   position: relative;
   z-index: 3;
-  text-align: center;
-  padding: 145px 3% 20px;
-  width: 100%;
+  width: 75%;
+  padding: 150px 0 120px 5%;
 }
 
 .eyebrow {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(28px, 3.5vw, 48px);
-  letter-spacing: 8px;
-  color: white;
-  margin-bottom: 5px;
-}
-
-.hero-heading h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(65px, 9.5vw, 145px);
-  line-height: .9;
-  font-weight: 600;
-  letter-spacing: -5px;
-  color: var(--cream);
-  white-space: nowrap;
-  text-shadow: 0 5px 25px rgba(0,0,0,.5);
-}
-
-.hero-heading h1 span {
-  color: var(--blue);
-}
-
-/* LOWER SECTION */
-
-.hero-layout {
-  position: relative;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  min-height: 420px;
-  padding: 30px 5% 100px;
-}
-
-/* EVENT PANEL ON LEFT */
-
-.event-panel {
-  width: 38%;
-  max-width: 470px;
-  padding: 30px;
-  text-align: center;
-  background: rgba(5, 6, 9, .55);
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255,255,255,.25);
-}
-
-.event-label {
-  font-size: 11px;
+  font-size: clamp(30px, 4vw, 54px);
   letter-spacing: 5px;
-  color: var(--blue);
-  font-weight: 700;
-  margin-bottom: 25px;
+  margin-left: 16%;
+  margin-bottom: 0;
+  color: #ffffff;
 }
+
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: clamp(65px, 11vw, 175px);
+  line-height: .85;
+  letter-spacing: -7px;
+  white-space: nowrap;
+  color: var(--cream);
+  text-shadow: 0 5px 25px rgba(0,0,0,.3);
+}
+
+.hero h1 span {
+  color: var(--blue);
+}
+
+/* EVENT INFORMATION */
 
 .event-info {
-  font-size: clamp(14px, 1.4vw, 19px);
-  font-weight: 600;
-  letter-spacing: 4px;
-  line-height: 2;
+  text-align: center;
+  margin-top: 35px;
+  width: 90%;
+  font-size: clamp(13px, 1.7vw, 22px);
+  font-weight: 500;
+  letter-spacing: 9px;
 }
 
 .event-info sup {
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: 0;
 }
 
-.event-time {
-  color: var(--blue);
+.event-info span {
+  margin: 0 12px;
 }
 
-.venue {
-  font-size: 14px;
-  letter-spacing: 5px;
-  margin-top: 8px;
+.event-info .venue {
+  margin-top: 12px;
 }
 
 /* SEPARATOR */
 
 .separator {
-  width: 90px;
+  width: 125px;
   height: 2px;
   background: var(--cream);
-  margin: 25px auto;
+  margin: 40px auto 30px;
   opacity: .7;
 }
 
 /* TICKETS */
 
 .ticket-label {
-  font-size: 10px;
-  letter-spacing: 3px;
-  margin-bottom: 18px;
+  text-align: center;
+  width: 90%;
+  letter-spacing: 7px;
+  font-size: 13px;
+  margin-bottom: 20px;
 }
 
 .ticket-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 16px 22px;
+  width: fit-content;
+  min-width: 320px;
+  margin: auto;
+  padding: 15px 25px;
   border: 1px solid var(--cream);
   border-radius: 40px;
   color: var(--cream);
   text-decoration: none;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
-  background: rgba(0,0,0,.4);
   transition: .3s;
+  background: rgba(0,0,0,.35);
 }
 
 .ticket-button:hover {
   background: var(--blue);
   border-color: var(--blue);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+}
+
+/* DANCER */
+
+.dancer-container {
+  position: absolute;
+  right: 2%;
+  bottom: 85px;
+  width: 43%;
+  height: 82%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.dancer-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  filter: grayscale(100%) contrast(1.15);
+  mix-blend-mode: screen;
+}
+
+/* BLUE GRAPHIC ACCENTS */
+
+.blue-mark {
+  position: absolute;
+  color: var(--blue);
+  font-family: 'Permanent Marker', cursive;
+  opacity: .8;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mark-one {
+  top: 12%;
+  left: 3%;
+  font-size: 150px;
+  transform: rotate(-30deg);
+}
+
+.mark-two {
+  bottom: 5%;
+  left: 2%;
+  font-size: 180px;
+  transform: rotate(-15deg);
 }
 
 /* FOOTER */
@@ -270,10 +270,10 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  min-height: 75px;
+  min-height: 85px;
   padding: 20px 4%;
-  border-top: 1px solid rgba(255,255,255,.4);
-  background: rgba(0,0,0,.55);
+  border-top: 1px solid rgba(255,255,255,.5);
+  background: rgba(0,0,0,.4);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -289,72 +289,110 @@ body {
 .tagline {
   font-size: 10px;
   font-weight: 600;
-  letter-spacing: 5px;
+  letter-spacing: 6px;
 }
 
-/* TABLET */
+/* RESPONSIVE DESIGN */
 
 @media (max-width: 900px) {
-  .hero-heading {
-    padding-top: 145px;
+
+  .navbar nav {
+    gap: 15px;
   }
 
-  .hero-heading h1 {
-    white-space: normal;
-    font-size: 10vw;
+  .navbar nav a {
+    font-size: 10px;
   }
 
-  .hero-layout {
-    min-height: 400px;
+  .hero-content {
+    width: 100%;
+    padding-top: 150px;
   }
 
-  .event-panel {
-    width: 45%;
+  .hero h1 {
+    font-size: 12vw;
+    letter-spacing: -3px;
+  }
+
+  .dancer-container {
+    opacity: .4;
+    width: 65%;
   }
 }
 
-/* MOBILE */
-
 @media (max-width: 600px) {
-  .hero {
-    min-height: 100svh;
-    background-position: 62% center;
+
+  .navbar {
+    height: 75px;
   }
 
-  .hero-heading {
-    padding: 125px 15px 20px;
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar nav {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    flex-direction: column;
+    background: #090a0d;
+  }
+
+  .navbar nav.show {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero-content {
+    padding: 150px 20px 130px;
+    width: 100%;
   }
 
   .eyebrow {
-    font-size: 24px;
-    letter-spacing: 4px;
+    margin-left: 5%;
+    font-size: 30px;
   }
 
-  .hero-heading h1 {
-    font-size: 14vw;
-    letter-spacing: -2px;
+  .hero h1 {
     white-space: normal;
-  }
-
-  .hero-layout {
-    min-height: 0;
-    padding: 30px 20px 110px;
-    justify-content: center;
-  }
-
-  .event-panel {
-    width: 100%;
-    max-width: 370px;
-    padding: 25px 20px;
-    background: rgba(5,6,9,.75);
+    font-size: 17vw;
+    line-height: .9;
   }
 
   .event-info {
-    font-size: 14px;
+    width: 100%;
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .ticket-label {
+    width: 100%;
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .ticket-button {
+    min-width: 0;
+    width: 85%;
+    font-size: 10px;
+  }
+
+  .dancer-container {
+    width: 90%;
+    height: 55%;
+    right: -20%;
+    opacity: .3;
   }
 
   .hero-bottom {
     padding: 15px;
+    min-height: 70px;
   }
 
   .bottom-logo {
@@ -366,6 +404,10 @@ body {
     letter-spacing: 2px;
   }
 
+  .mark-one {
+    font-size: 90px;
+  }
+}
     </style>
   </header>
 
