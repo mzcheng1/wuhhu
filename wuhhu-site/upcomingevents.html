@@ -147,9 +147,16 @@ body {
   color: var(--blue);
 }
 
-.event-info {
+ .event-info,
+  .ticket-label,
+  .separator,
+  .ticket-button {
+    --shift: 5vw; /* bigger = further right */
+  }
+
+  .event-info {
     width: 31vw;
-    margin: 35px 0 0 0;
+    margin: 35px 0 0 var(--shift);
     text-align: center;
     letter-spacing: 6px;
     font-size: clamp(12px, 1.5vw, 20px);
@@ -157,23 +164,22 @@ body {
 
   .separator {
     width: 125px;
-    margin: 40px 0 30px calc((31vw - 125px) / 2);
+    margin: 40px 0 30px calc(var(--shift) + (31vw - 125px) / 2);
   }
 
   .ticket-label {
     width: 31vw;
-    margin: 0 0 20px 0;
+    margin: 0 0 20px var(--shift);
     text-align: center;
     letter-spacing: 6px;
   }
-
   .ticket-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: fit-content;
   min-width: 320px;
-  margin: 0 0 0 calc((31vw - 18vw) / 2);
+   margin: 0 0 0 calc(var(--shift) + (31vw - 18vw) / 2);
   padding: 15px 25px;
   border: 1px solid var(--cream);
   border-radius: 40px;
