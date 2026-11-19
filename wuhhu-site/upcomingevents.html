@@ -385,7 +385,57 @@ body {
     font-size: 90px;
   }
 }
+/* IMAGES BELOW HERO */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 100px 5%;
+  background: var(--black);
+}
 
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity .9s ease, transform .9s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger so they appear one after another */
+.reveal:nth-child(2) { transition-delay: .2s; }
+.reveal:nth-child(3) { transition-delay: .4s; }
+
+/* Stack on phones */
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    padding: 60px 5%;
+  }
+  .reveal:nth-child(2),
+  .reveal:nth-child(3) {
+    transition-delay: 0s;
+  }
+}
+
+/* Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
     </style>
   </header>
 
@@ -433,6 +483,11 @@ body {
     </a>
 
   </div>
+  <section class="gallery">
+  <img class="reveal" src="wrist.png" alt="Wrist">
+  <img class="reveal" src="know.png" alt="Know">
+  <img class="reveal" src="impt.png" alt="Impt">
+</section>
 
 
   <div class="hero-bottom">
@@ -470,6 +525,18 @@ document.querySelectorAll("#navigation a").forEach(link => {
     link.classList.add("active");
   });
 });
+     const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // animate once
+      }
+    });
+  }, { threshold: 0.2 });
+
+  reveals.forEach(el => observer.observe(el));
 </script>
   
 </body>
