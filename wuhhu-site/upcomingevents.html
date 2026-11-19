@@ -147,53 +147,32 @@ body {
   color: var(--blue);
 }
 
-/* EVENT INFORMATION */
 .event-info {
-  text-align: left;
-  margin: 35px auto 0;
-  width: auto;
-  font-size: clamp(13px, 1.7vw, 22px);
-  font-weight: 500;
-  letter-spacing: 9px;
-}
+    width: 31vw;
+    margin: 35px 0 0 0;
+    text-align: center;
+    letter-spacing: 6px;
+    font-size: clamp(12px, 1.5vw, 20px);
+  }
 
-/* SEPARATOR */
-.separator {
-  width: 125px;
-  height: 2px;
-  background: var(--cream);
-  margin: 40px auto 30px;
-  opacity: .7;
-}
+  .separator {
+    width: 125px;
+    margin: 40px 0 30px calc((31vw - 125px) / 2);
+  }
 
-/* TICKETS */
-.ticket-label {
-  text-align: left;
-  width: auto;
-  margin: 0 0 20px;
-  letter-spacing: 7px;
-  font-size: 13px;
-}
+  .ticket-label {
+    width: 31vw;
+    margin: 0 0 20px 0;
+    text-align: center;
+    letter-spacing: 6px;
+  }
 
-.ticket-button {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: fit-content;
-  min-width: 320px;
-margin-left: 0;
-  padding: 15px 25px;
-  border: 1px solid var(--cream);
-  border-radius: 40px;
-  color: var(--cream);
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  background: rgba(0,0,0,.35);
-  transition: .3s;
+  .ticket-button {
+    width: 18vw;
+    min-width: 0;
+    margin: 0 0 0 calc((31vw - 18vw) / 2);
+  }
 }
-
 /* DANCER */
 
 .dancer-container {
