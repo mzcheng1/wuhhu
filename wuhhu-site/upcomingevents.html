@@ -486,36 +486,11 @@ body {
   <img class="reveal" src="impt.png" alt="Impt">
 </section>
 
-  <script>
-const menuToggle = document.getElementById("menuToggle");
-const navigation = document.getElementById("navigation");
-
-menuToggle.addEventListener("click", () => {
-  navigation.classList.toggle("show");
-});
-
-// Close mobile menu after selecting a section
-document.querySelectorAll("#navigation a").forEach(link => {
-  link.addEventListener("click", () => {
-    navigation.classList.remove("show");
-  });
-});
-
-// Highlight the active navigation link
-document.querySelectorAll("#navigation a").forEach(link => {
-  link.addEventListener("click", () => {
-    document.querySelectorAll("#navigation a").forEach(item => {
-      item.classList.remove("active");
-    });
-
-    link.classList.add("active");
-  });
-});
+<script>
 (function () {
   var imgs = document.querySelectorAll('.gallery img');
-  if (!imgs.length) { console.log('No gallery images found'); return; }
+  if (!imgs.length) return;
 
-  // Hide them and set up the animation
   imgs.forEach(function (img) {
     img.style.opacity = '0';
     img.style.transform = 'translateY(60px)';
