@@ -511,18 +511,18 @@ document.querySelectorAll("#navigation a").forEach(link => {
     link.classList.add("active");
   });
 });
-     const reveals = document.querySelectorAll('.reveal');
+    document.documentElement.classList.add('js');
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // animate once
+        observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.2 });
 
-  reveals.forEach(el => observer.observe(el));
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
   
 </body>
