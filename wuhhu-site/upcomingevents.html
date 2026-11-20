@@ -511,18 +511,30 @@ document.querySelectorAll("#navigation a").forEach(link => {
     link.classList.add("active");
   });
 });
-    document.documentElement.classList.add('js');
+ document.addEventListener('DOMContentLoaded', () => {
+  const imgs = document.querySelectorAll('.gallery .reveal');
+  const gallery = document.querySelector('.gallery');
+  if (!gallery) return;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
+  // No IntersectionObserver support: just show everything
+  if (!('IntersectionObserver' in window)) {
+    imgs.forEach(img => img.classList.add('visible'));
+    return;
+  }
 
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  document.documentElement.classList.add('js');
+
+  const io = new IntersectionObserver((entries, obs) => {
+    if (entries[0].isIntersecting) {
+      imgs.forEach((img, i) => {
+        setTimeout(() => img.classList.add('visible'), i * 200);
+      });
+      obs.disconnect();
+    }
+  }, { threshold: 0, rootMargin: '0px 0px -25% 0px' });
+
+  io.observe(gallery);
+});
 </script>
   
 </body>
