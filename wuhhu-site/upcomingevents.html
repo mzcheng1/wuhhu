@@ -511,30 +511,38 @@ document.querySelectorAll("#navigation a").forEach(link => {
     link.classList.add("active");
   });
 });
- document.addEventListener('DOMContentLoaded', () => {
-  const imgs = document.querySelectorAll('.gallery .reveal');
-  const gallery = document.querySelector('.gallery');
-  if (!gallery) return;
+(function () {
+  var imgs = document.querySelectorAll('.gallery img');
+  if (!imgs.length) { console.log('No gallery images found'); return; }
 
-  // No IntersectionObserver support: just show everything
-  if (!('IntersectionObserver' in window)) {
-    imgs.forEach(img => img.classList.add('visible'));
-    return;
+  // Hide them and set up the animation
+  imgs.forEach(function (img) {
+    img.style.opacity = '0';
+    img.style.transform = 'translateY(60px)';
+    img.style.transition = 'opacity .9s ease, transform .9s ease';
+  });
+
+  var shown = false;
+
+  function check() {
+    if (shown) return;
+    var top = document.querySelector('.gallery').getBoundingClientRect().top;
+    if (top < window.innerHeight * 0.85) {
+      shown = true;
+      imgs.forEach(function (img, i) {
+        setTimeout(function () {
+          img.style.opacity = '1';
+          img.style.transform = 'translateY(0)';
+        }, i * 250);
+      });
+    }
   }
 
-  document.documentElement.classList.add('js');
-
-  const io = new IntersectionObserver((entries, obs) => {
-    if (entries[0].isIntersecting) {
-      imgs.forEach((img, i) => {
-        setTimeout(() => img.classList.add('visible'), i * 200);
-      });
-      obs.disconnect();
-    }
-  }, { threshold: 0, rootMargin: '0px 0px -25% 0px' });
-
-  io.observe(gallery);
-});
+  window.addEventListener('scroll', check, { passive: true });
+  window.addEventListener('resize', check);
+  window.addEventListener('load', check);
+  check();
+})();
 </script>
   
 </body>
